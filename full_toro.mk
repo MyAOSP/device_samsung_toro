@@ -1,4 +1,3 @@
-# Portions Copyright (C) 2012 VMware, Inc. All Rights Reserved.
 # Copyright (C) 2011 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,16 +21,15 @@
 # lines, full and toro, hence its name.
 #
 
-# Camera and Gallery
-PRODUCT_PACKAGES := \
-    Gallery \
-    GNexusParts
-
 #if we do this after the full_base_telephony is included some of these don't get picked up..
 PRODUCT_COPY_FILES += \
     device/samsung/toro/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
     device/sample/etc/apns-conf_verizon.xml:system/etc/apns-conf.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    
+# Camera
+PRODUCT_PACKAGES := \
+    Gallery
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -43,6 +41,7 @@ $(call inherit-product, device/samsung/toro/device_vzw.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_toro
 PRODUCT_DEVICE := toro
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full AOSP on Toro-VZW
-PRODUCT_RESTRICT_VENDOR_FILES := false
+PRODUCT_RESTRICT_VENDOR_FILES := true
+PRODUCT_BRAND := Google
+PRODUCT_MODEL := Galaxy Nexus
+PRODUCT_MANUFACTURER := Samsung

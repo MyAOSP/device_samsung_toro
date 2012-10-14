@@ -33,5 +33,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000 \
 	ro.cdma.otaspnumschema=SELC,1,80,99
 
+# Vzw
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.google.clientidbase=android-verizon
+
 $(call inherit-product, device/samsung/tuna/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/toro/device-vendor.mk)

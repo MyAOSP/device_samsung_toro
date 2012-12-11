@@ -25,6 +25,11 @@ PRODUCT_COPY_FILES += \
 	device/sample/etc/apns-conf_verizon.xml:system/etc/apns-conf.xml \
 	frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
+PRODUCT_COPY_FILES += \
+	device/samsung/toro/com.vzw.hardware.ehrpd.xml:system/etc/permissions/com.vzw.hardware.ehrpd.xml \
+	device/samsung/toro/com.vzw.hardware.lte.xml:system/etc/permissions/com.vzw.hardware.lte.xml \
+	device/samsung/toro/com.vzw.vzwapnlib.xml:system/etc/permissions/com.vzw.vzwapnlib.xml \
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.vc_call_vol_steps=7 \
 	ro.cdma.home.operator.numeric=310004 \

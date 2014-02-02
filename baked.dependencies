@@ -1,10 +1,12 @@
 [
  {
    "repository": "kernel_samsung_tuna",
-   "target_path": "kernel/samsung/tuna"
+   "target_path": "kernel/samsung/tuna",
+   "branch": "kk-4.4"
  },
  {
    "repository": "device_samsung_tuna",
-   "target_path": "device/samsung/tuna"
+   "target_path": "device/samsung/tuna",
+   "branch": "kk-4.4"
  }
 ]
